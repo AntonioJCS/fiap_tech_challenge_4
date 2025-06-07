@@ -3,13 +3,25 @@ name = "fiap-tech-challenge-4"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "Antonio Juan Carvalho Silva",email = "antonioxp.8@hotmail.com"}
+    {name = "Antonio Juan Carvalho Silva", email = "antonioxp.8@hotmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "requests>=2.25.1",
+    "numpy>=1.21.0",
+    "python-dotenv (>=1.1.0,<2.0.0)",
+    "fastapi (>=0.115.12,<0.116.0)",
+    "uvicorn (>=0.34.3,<0.35.0)"
 ]
 
+[tool.poetry.dependencies]
+app = { path = "app", develop = true }
+data_pipeline = { path = "data_pipeline", develop = true }
+ml_lifecycle = { path = "ml_lifecycle", develop = true }
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
