@@ -6,7 +6,7 @@ authors = [
     {name = "Antonio Juan Carvalho Silva", email = "antonioxp.8@hotmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = "==3.10"
 dependencies = [
     "requests>=2.25.1",
     "numpy>=1.21.0",
@@ -15,10 +15,10 @@ dependencies = [
     "uvicorn (>=0.34.3,<0.35.0)"
 ]
 
-[tool.poetry.dependencies]
-app = { path = "app", develop = true }
-data_pipeline = { path = "data_pipeline", develop = true }
-ml_lifecycle = { path = "ml_lifecycle", develop = true }
+# [tool.poetry.dependencies]
+# app = { path = "app", develop = true }
+# data_pipeline = { path = "data_pipeline", develop = true }
+# ml_lifecycle = { path = "ml_lifecycle", develop = true }
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.5"
