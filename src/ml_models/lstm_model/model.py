@@ -1,0 +1,1 @@
+# Definição da arquitetura LSTM
