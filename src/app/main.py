@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from features.stock_prediction import monitoring_router, ml_performance_router, stock_predict_router
+from app.features.stock_prediction import monitoring_router, ml_performance_router, stock_predict_router
 
 app = FastAPI(
     title="Meu Projeto FastAPI",

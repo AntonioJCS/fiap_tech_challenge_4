@@ -1,0 +1,52 @@
+@startuml
+actor User
+
+== Extração dos dados Raw + Persistência ==
+data.download -> data.download : Baixa dados raw (yfinance)
+data.download -> data.crud : Salva dados raw no banco
+data.crud -> data.orm_models : Instancia objeto raw
+data.orm_models -> data.database : Insere dados raw
+data.database --> data.orm_models : Confirmação
+data.orm_models --> data.crud : Confirmação
+data.crud --> data.download : Sucesso
+
+== Tratamento dos dados Raw + Persistência ==
+model.preprocess -> data.crud : Busca dados raw no banco
+data.crud -> data.orm_models : Query (dados raw)
+data.orm_models -> data.database : Executa consulta
+data.database --> data.orm_models : Retorna dados raw
+data.orm_models --> data.crud : Retorna dados
+data.crud --> model.preprocess : Dados raw
+
+model.preprocess -> model.preprocess : Limpeza/Feature Eng.
+model.preprocess -> data.crud : Salva dados tratados no banco
+data.crud -> data.orm_models : Instancia objeto processado
+data.orm_models -> data.database : Insere dados tratados
+data.database --> data.orm_models : Confirmação
+data.orm_models --> data.crud : Confirmação
+data.crud --> model.preprocess : Sucesso
+
+== Treinamento do Modelo ==
+model.lstm_model -> data.crud : Busca dados tratados no banco
+data.crud -> data.orm_models : Query (dados tratados)
+data.orm_models -> data.database : Executa consulta
+data.database --> data.orm_models : Retorna dados tratados
+data.orm_models --> data.crud : Retorna dados
+data.crud --> model.lstm_model : Dados tratados
+
+model.lstm_model -> model.lstm_model : Treina modelo LSTM
+model.lstm_model -> model.lstm_model : Salva estado do modelo
+
+== Inferência Via API ==
+User -> app.api : POST /predict (envia dados para previsão)
+app.api -> app.schemas : Valida dados de entrada
+app.schemas --> app.api : Dados validados
+
+app.api -> model.lstm_model : Faz inferência com modelo já carregado
+model.lstm_model -> model.lstm_model : Realiza predição
+model.lstm_model --> app.api : Resultado da predição
+
+app.api -> app.schemas : Valida/serializa resposta
+app.schemas --> app.api : Resposta validada
+app.api --> User : Retorna predição
+@enduml
