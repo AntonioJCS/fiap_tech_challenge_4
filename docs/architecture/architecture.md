@@ -99,15 +99,20 @@ Desenvolver uma solução em Python que:
 ```plaintext
 fiap_tech_challenge_4/
 ├── src/
+│   ├── common/
+│   │   ├── config.py          # Configurações de variaveis para o projeto
+│   │   └── logger.py          # Configuraçõ de Logging
+│   ├── logs/                  # Arquivos de log gerados em tempo de execução para debugging, auditoria e monitoramento.
 │   ├── api/                   # Onde reside a API, suas rotas e validação de entrada/saída via schemas, além de gerenciar dependências
-│   │   ├── __init__.py
-│   │   ├── main.py            # Inicialização da API
-│   │   ├── endpoints/         # Rotas/endpoints
-│   │   ├── schemas/           # Schemas Pydantic (entrada/saída)
-│   │   └── dependencies/      # (opcional) Injeção de dependências
+│   │   └── v1/                # Suporte fácil para versionamento ex:`api/v1/`,`api/v2/`)
+│	│       ├── __init__.py
+│	│       ├── main.py            # Inicialização da API
+│	│	    ├── routers/           # Rotas/endpoints
+│	│	    ├── schemas/           # Schemas Pydantic (entrada/saída)
+│	│	    └── dependencies/      # (opcional) Injeção de dependências
 │   ├── data_pipeline/         # Responsável por todo o ciclo de persistência (modelos ORM, CRUD, acesso ao banco, scripts de ingestão de dados)
 │   │   ├── __init__.py
-│   │   ├── downloader/        # Scripts para baixar dados
+│   │   ├── sources/           # Scripts para obter dados de diversas origens
 │   │   ├── orm_models/        # Modelos ORM (SQLAlchemy)
 │   │   ├── crud/              # Funções CRUD (acesso banco)
 │   │   └── database/          # Configuração do banco
@@ -119,7 +124,7 @@ fiap_tech_challenge_4/
 │           ├── model.py               # Definição da arquitetura LSTM
 │           ├── train.py               # Pipeline de treinamento do LSTM
 │           ├── predict.py             # Funções de inferência do LSTM
-│           └── artifacts/             # Produtos gerados (uporte fácil para versionamento ex: `artifacts/v1/`, `artifacts/v2/`)
+│           └── artifacts/             # Produtos gerados (Suporte fácil para versionamento ex: `artifacts/v1/`, `artifacts/v2/`)
 │               ├── lstm_weights.h5    # Pesos do modelo treinado
 │               ├── scaler.pkl         # Escalonador salvo, se houver
 │               └── evaluation.json    # Métricas do modelo (MAE, RMSE, etc.)
