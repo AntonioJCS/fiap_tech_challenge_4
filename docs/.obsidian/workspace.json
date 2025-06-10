@@ -11,14 +11,10 @@
             "id": "13f732b4387b2791",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "architecture/architecture.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "architecture"
+              "title": "Nova aba"
             }
           }
         ]
@@ -142,13 +138,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "architecture/architecture.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Sumário de architecture"
+              "title": "Sumário"
             }
           }
         ],
@@ -156,7 +151,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 618.5
+    "width": 229.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -170,8 +165,10 @@
   },
   "active": "13f732b4387b2791",
   "lastOpenFiles": [
-    "architecture/architecture_sequence_diagram.svg",
+    "Processo de Tratamento de Ações Judiciais.md",
+    "2025-06-10.md",
     "architecture/architecture.md",
+    "architecture/architecture_sequence_diagram.svg",
     "_old/Gerenciamento de Monorepos com Poetry.md",
     "Arquitetura.md",
     "architecture_sequence_diagram.wsd",
