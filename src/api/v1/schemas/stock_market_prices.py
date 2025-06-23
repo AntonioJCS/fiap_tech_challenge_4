@@ -1,10 +1,10 @@
 from pydantic import BaseModel, Field, field_validator
-from datetime import date
-from typing import Optional
+from datetime import datetime
+from typing import List
 
 class StockPriceBase(BaseModel):
     """Schema base para StockPrice"""
-    date: date = Field(..., description="Data do preço da ação")
+    date: datetime = Field(..., description="Data do preço da ação")
     ticker: str = Field(..., min_length=1, max_length=16, description="Código de negociação de um ativo ou derivativo na Bolsa de Valores")
     close: float = Field(..., gt=0, description="Preço de fechamento")
     high: float = Field(..., gt=0, description="Preço máximo do dia")
@@ -46,3 +46,5 @@ class StockPriceBase(BaseModel):
             raise ValueError('Preço máximo não pode ser menor que fechamento')
         return v
 
+class StockMarketPriceBatch(BaseModel):
+    data: List[StockPriceBase]

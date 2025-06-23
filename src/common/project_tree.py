@@ -45,9 +45,9 @@ def project_tree_generate(
 
 
 if __name__ == "__main__":
-    from config import PROJECT_DIR
+    from config import PROJECT_ROOT_DIR
     project_tree_generate(
-        root_path=PROJECT_DIR,
+        root_path=PROJECT_ROOT_DIR,
         ignore=['.venv', '__pycache__', '.git'],
         no_expand=['docs', 'tests', 'logs'] 
         )

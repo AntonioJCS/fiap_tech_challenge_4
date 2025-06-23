@@ -2,6 +2,7 @@ from sqlalchemy import Column, Integer, String, Date
 from sqlalchemy.types import DECIMAL
 from data_pipeline.database.connection import Base
 
+
 class StockPrice(Base):
     __tablename__ = 'stock_prices'
 

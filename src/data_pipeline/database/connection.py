@@ -1,16 +1,26 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import DeclarativeBase, sessionmaker, scoped_session
 from common.config import DATABASE_PATH
+from sqlalchemy import URL
+
 
 # URL do SQLite
-DATABASE_URL = f"sqlite:///{DATABASE_PATH.as_posix()}"
+url = URL.create(drivername='sqlite', database=DATABASE_PATH.as_posix())
 
 # Criando o engine com echo opcional
-engine = create_engine(DATABASE_URL, echo=False, connect_args={"check_same_thread": False})
+engine = create_engine(url, echo=False, connect_args={"check_same_thread": False})
 
-# Gerador de sessão (tipado e thread-safe)
+# Gerador de sessão (tipado e thread-safe) (garante que cada thread tenha sua própria sessão)
 SessionLocal = scoped_session(sessionmaker(bind=engine, autoflush=False, autocommit=False))
 
 # Nova forma de criar Base (API 2.0)
 class Base(DeclarativeBase):
     pass
+
+def get_db():
+    """Função para gestão de sessões independentes"""
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
