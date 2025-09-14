@@ -1,3 +1,12 @@
+Como executar:
+
+export PYTHONPATH={$PWD}/SRC
+echo $PYTHONPATH
+python -m uvicorn api.main_public:app --reload --app-dir src
+
+
+
+
 ## Projeto: Pipeline de Predição de Ações com LSTM, API e Banco de Dados
 
 ### Abstract
