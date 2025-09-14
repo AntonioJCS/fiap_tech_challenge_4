@@ -29,6 +29,10 @@ dependencies = [
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.5"
+taskipy = "^1.14.1"
+
+[tool.taskipy.tasks]
+run_app = "python -m uvicorn src.api.main_public:app --reload"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

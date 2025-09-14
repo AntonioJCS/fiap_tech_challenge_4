@@ -1,6 +1,6 @@
 # Especificos do projeto
-.obsidian/plugins/
-.log/
+/log/*
+!logs/.gitkeep
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
