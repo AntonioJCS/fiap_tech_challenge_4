@@ -1,15 +1,31 @@
-Como executar:
 
-export PYTHONPATH={$PWD}/SRC
-echo $PYTHONPATH
-python -m uvicorn api.main_public:app --reload --app-dir src
+## Setup
+```bash
+# 1) Instalar uv ()
+pip install uv
+
+# 2) Instalar aplicação
+uv sync --group tests
+
+# 3) Verificar Variaveis de Ambiente
+uv run python -m ftc4.common.config
+
+# 4) Realizar testes unitários
+uv run pytest -v
+```
+
+
+## Iniciar Aplicação (API)
+```bash
+# 1) Executar aplicação
+uv run start
+```
 
 
 
 
 ## Projeto: Pipeline de Predição de Ações com LSTM, API e Banco de Dados
 
-### Abstract
 
 Este projeto propõe o desenvolvimento de uma solução completa para previsão de preços de fechamento de ações utilizando redes LSTM. A aplicação cobre todas as etapas do ciclo de vida de projetos de machine learning: coleta, pré-processamento, armazenamento, treinamento, deploy em API e integração com banco de dados, sempre com foco em alta coesão e baixo acoplamento entre as camadas.
 * * *

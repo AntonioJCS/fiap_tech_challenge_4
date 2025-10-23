@@ -1,6 +1,7 @@
 # Especificos do projeto
 /log/*
 !logs/.gitkeep
+data/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

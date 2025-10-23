@@ -1,12 +1,19 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
 [project]
-name = "fiap-tech-challenge-4"
+# Metadados principais (PEP 621)
+name = "ftc4"
 version = "0.1.0"
-description = ""
-authors = [
-    {name = "Antonio Juan Carvalho Silva", email = "antonioxp.8@hotmail.com"}
-]
+description = "API + Modelo LSTM"
 readme = "README.md"
-requires-python = "==3.10"
+requires-python = ">=3.10,<=3.10.19"
+license = { text = "MIT" }
+authors = [{ name = "AntonioJCS", email = "antonioxp.8@hotmail.com" }]
+keywords = ["machine-learning"]
+
+#  Dependências principais (instaladas sempre)
 dependencies = [
     "requests>=2.25.1",
     "numpy>=1.21.0",
@@ -19,21 +26,54 @@ dependencies = [
     "yfinance (>=0.2.62,<0.3.0)",
     "scikit-learn (>=1.7.0,<2.0.0)",
     "matplotlib (>=3.10.3,<4.0.0)",
-    "torch (>=2.7.1,<3.0.0)"
+    "torch (>=2.7.1,<3.0.0)",
+    "rich>=14.2.0",
 ]
 
-# [tool.poetry.dependencies]
-# app = { path = "app", develop = true }
-# data_pipeline = { path = "data_pipeline", develop = true }
-# ml_lifecycle = { path = "ml_lifecycle", develop = true }
+# Entrypoints CLI (PEP 621)
+[project.scripts]
+# Startar Aplicação
+start = "ftc4.run:main_public"
+start_admin = "ftc4.run:main_admin"
 
-[tool.poetry.group.dev.dependencies]
-ipykernel = "^6.29.5"
-taskipy = "^1.14.1"
+[tool.hatch.build.targets.wheel]
+# pacotes editaveis
+packages = ["src/ftc4"]
 
-[tool.taskipy.tasks]
-run_app = "python -m uvicorn src.api.main_public:app --reload"
+# Dependências de desenvolvimento
+[dependency-groups]
+docs = [
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocs-mermaid2-plugin",      # diagramas
+    "mkdocstrings[python]",        # documentação automática de código
+    "mkdocs-awesome-pages-plugin", # estrutura hierárquica nos docs
+]
 
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+lint = [
+    "ruff",
+    "black",
+    "isort",
+    "mypy",       # type checking estático
+    "bandit",     # segurança e análise de vulnerabilidade
+    "pre-commit",
+]
+
+tests = [
+    "pytest",
+    "pytest-cov",
+    "pytest-mock",
+    "coverage",
+    "hypothesis",  # testes baseados em propriedades
+]
+
+dev = [
+    "ipython",
+    "jupyterlab",
+    "notebook",
+    "rich", # logging e visualização bonita no terminal
+    "tqdm", # barras de progresso
+    "debugpy", # debugging com VSCode
+    "types-requests", # tipagem estática opcional
+    "ipykernel>=6.30.1",
+]

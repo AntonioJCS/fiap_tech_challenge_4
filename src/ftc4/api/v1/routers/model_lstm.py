@@ -3,10 +3,10 @@ from sqlalchemy.orm import Session
 from sqlalchemy import select
 import numpy as np
 
-from data_pipeline.database.connection import get_db
-from data_pipeline.orm_models.stock_market import StockPrice
-from ml_models.lstm_model.train import Trainer
-from ml_models.lstm_model.predict import predict_next
+from ftc4.data_pipeline.database.connection import get_db
+from ftc4.data_pipeline.orm_models.stock_market import StockPrice
+from ftc4.ml_models.lstm_model.train import Trainer
+from ftc4.ml_models.lstm_model.predict import predict_next
 
 router = APIRouter(prefix="/lstm", tags=["LSTM"])
 

@@ -4,11 +4,9 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, TensorDataset
 from pathlib import Path
-from ml_models.lstm_model.model import LSTMForecaster
-from ml_models.lstm_model.preprocess import SeriesPreprocessor
-
-ARTIFACTS_DIR = Path("src/ml_models/lstm_model/artifacts")
-ARTIFACTS_DIR.mkdir(parents=True, exist_ok=True)
+from ftc4.ml_models.lstm_model.model import LSTMForecaster
+from ftc4.ml_models.lstm_model.preprocess import SeriesPreprocessor
+from ftc4.ml_models import lstm_model
 
 class Trainer:
     def __init__(self, lookback: int = 60, lr: float = 1e-3, epochs: int = 20, batch_size: int = 64):
@@ -46,7 +44,7 @@ class Trainer:
                 print(f"[epoch {epoch+1}] loss={epoch_loss:.6f}")
 
         # salvar
-        torch.save(model.state_dict(), ARTIFACTS_DIR / "lstm.pt")
+        torch.save(model.state_dict(), lstm_model.ARTIFACTS_DIR / "lstm.pt")
         import joblib
-        joblib.dump(self.pp, ARTIFACTS_DIR / "preprocessor.joblib")
+        joblib.dump(self.pp, lstm_model.ARTIFACTS_DIR / "preprocessor.joblib")
         return model

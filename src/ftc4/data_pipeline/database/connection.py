@@ -1,11 +1,11 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import DeclarativeBase, sessionmaker, scoped_session
-from common.config import DATABASE_PATH
+from ftc4.common.config import settings
 from sqlalchemy import URL
 
 
 # URL do SQLite
-url = URL.create(drivername='sqlite', database=DATABASE_PATH.as_posix())
+url = URL.create(drivername='sqlite', database=settings.DATABASE_PATH.as_posix())
 
 # Criando o engine com echo opcional
 engine = create_engine(url, echo=False, connect_args={"check_same_thread": False})

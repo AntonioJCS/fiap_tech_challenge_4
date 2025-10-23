@@ -1,18 +1,16 @@
-# src/ml_models/lstm_model/predict.py
 from __future__ import annotations
 import numpy as np
 import torch
 from pathlib import Path
-from ml_models.lstm_model.model import LSTMForecaster
-
-ARTIFACTS_DIR = Path("src/ml_models/lstm_model/artifacts")
+from ftc4.ml_models.lstm_model.model import LSTMForecaster
+from ftc4.ml_models import lstm_model
 
 def load_artifacts():
     model = LSTMForecaster()
-    model.load_state_dict(torch.load(ARTIFACTS_DIR / "lstm.pt", map_location="cpu"))
+    model.load_state_dict(torch.load(lstm_model.ARTIFACTS_DIR / "lstm.pt", map_location="cpu"))
     model.eval()
     import joblib
-    pp = joblib.load(ARTIFACTS_DIR / "preprocessor.joblib")
+    pp = joblib.load(lstm_model.ARTIFACTS_DIR / "preprocessor.joblib")
     return model, pp
 
 @torch.no_grad()

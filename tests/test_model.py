@@ -1,7 +1,6 @@
-# tests/test_model.py
 import numpy as np
-from ml_models.lstm_model.train import Trainer
-from ml_models.lstm_model.predict import predict_next
+from ftc4.ml_models.lstm_model.train import Trainer
+from ftc4.ml_models.lstm_model.predict import predict_next
 
 def test_lstm_train_predict_smoke():
     # série senoidal simples
