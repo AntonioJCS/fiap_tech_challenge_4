@@ -7,6 +7,9 @@ from ftc4.data_pipeline.database.connection import get_db
 from ftc4.data_pipeline.orm_models.stock_market import StockPrice
 from ftc4.ml_models.lstm_model.train import Trainer
 from ftc4.ml_models.lstm_model.predict import predict_next
+from ftc4.common.logger import get_logger
+
+logger = get_logger(__name__)
 
 router = APIRouter(prefix="/lstm", tags=["LSTM"])
 
@@ -24,11 +27,15 @@ def train_model(
     )
     values = [float(x[0]) for x in db.execute(q).all()]
     if len(values) < lookback + 5:
-        raise HTTPException(status_code=400, detail="Série insuficiente para treino")
+        error_message = f"Série insuficiente para treino. Tamanho atual: {len(values)}, Requerido: {lookback + 5}."
+        logger.error(error_message)
+        raise HTTPException(status_code=400, detail="Série de dados insuficiente para o treinamento. Verifique o tamanho da sua entrada.")
 
     series = np.array(values, dtype=float)
     Trainer(lookback=lookback).fit(series)         # salva artefatos em /artifacts
-    return {"message": "Modelo treinado com sucesso", "ticker": ticker.upper(), "n_obs": len(series)}
+    return_msg = {"message": "Modelo treinado com sucesso", "ticker": ticker.upper(), "n_obs": len(series)}
+    logger.info(return_msg)
+    return return_msg
 
 
 @router.get("/predict")
@@ -44,7 +51,10 @@ def predict(
     )
     values = [float(x[0]) for x in db.execute(q).all()]
     if not values:
+        error_message = "Sem dados no banco para este ticker"
+        logger.error(error_message)
         raise HTTPException(status_code=404, detail="Sem dados no banco para este ticker")
 
     preds = predict_next(np.array(values, dtype=float), n_steps=steps)
+    logger.info(f"Os proximos {steps} valores de fechamento foram previstos. {str(preds.tolist()[0:3]).replace(']', ', ...]')}")
     return {"ticker": ticker.upper(), "steps": steps, "predictions": preds.tolist()}

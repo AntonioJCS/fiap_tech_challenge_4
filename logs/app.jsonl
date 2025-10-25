@@ -1,0 +1,76 @@
+{"asctime": "2025-10-25T11:44:08-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T11:44:08-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T11:44:08-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T11:44:21-0300", "levelname": "INFO", "name": "ftc4.api.public", "message": "", "request_id": "-", "status": "ok"}
+{"asctime": "2025-10-25T11:44:40-0300", "levelname": "ERROR", "name": "ftc4.api.v1.routers.model_lstm", "message": "S\u00e9rie insuficiente para treino. Tamanho atual: 0, Requerido: 65.", "request_id": "-"}
+{"asctime": "2025-10-25T11:45:02-0300", "levelname": "INFO", "name": "ftc4.api.v1.routers.stock_market", "message": "Lote de 1 registros inserido com sucesso via /insert_batch.", "request_id": "-"}
+{"asctime": "2025-10-25T11:45:07-0300", "levelname": "ERROR", "name": "ftc4.api.v1.routers.model_lstm", "message": "S\u00e9rie insuficiente para treino. Tamanho atual: 0, Requerido: 65.", "request_id": "-"}
+{"asctime": "2025-10-25T11:46:21-0300", "levelname": "INFO", "name": "ftc4.api.v1.routers.stock_market", "message": "Lote de 1 registros inserido com sucesso via /insert_batch.", "request_id": "-"}
+{"asctime": "2025-10-25T11:46:26-0300", "levelname": "ERROR", "name": "ftc4.api.v1.routers.model_lstm", "message": "S\u00e9rie insuficiente para treino. Tamanho atual: 1, Requerido: 65.", "request_id": "-"}
+{"asctime": "2025-10-25T11:46:43-0300", "levelname": "INFO", "name": "ftc4.api.v1.routers.stock_market", "message": "Iniciando coleta para NVDA de 2025-01-01 at\u00e9 2025-10-23.", "request_id": "-"}
+{"asctime": "2025-10-25T11:46:44-0300", "levelname": "INFO", "name": "ftc4.api.v1.routers.stock_market", "message": "Coleta e inser\u00e7\u00e3o de 202 registros para NVDA conclu\u00edda com sucesso. Per\u00edodo: 2025-01-02 a 2025-10-22.", "request_id": "-"}
+{"asctime": "2025-10-25T11:46:52-0300", "levelname": "INFO", "name": "ftc4.api.v1.routers.model_lstm", "message": "Modelo treinado com sucesso", "request_id": "-", "ticker": "NVDA", "n_obs": 203}
+{"asctime": "2025-10-25T11:47:19-0300", "levelname": "INFO", "name": "ftc4.api.v1.routers.model_lstm", "message": "", "request_id": "-", "ticker": "NVDA", "steps": 5, "predictions": [154.34381103515625, 152.7935791015625, 152.1475830078125, 151.98263549804688, 152.05418395996094]}
+{"asctime": "2025-10-25T11:55:02-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T11:55:02-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T11:55:02-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T12:00:28-0300", "levelname": "INFO", "name": "__main__", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T12:00:28-0300", "levelname": "INFO", "name": "__main__", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T12:00:28-0300", "levelname": "INFO", "name": "__main__", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T12:06:04-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T12:06:04-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T12:06:04-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T12:40:12-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T12:40:12-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T12:40:12-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T12:41:05-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T12:41:05-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T12:41:05-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T12:41:13-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T12:41:13-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T12:41:13-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T12:43:28-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T12:43:28-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T12:43:28-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T12:43:33-0300", "levelname": "INFO", "name": "ftc4.api.v1.routers.model_lstm", "message": "Os proximos 10 valores de fechamento foram previstos.", "request_id": "-"}
+{"asctime": "2025-10-25T12:43:44-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T12:43:44-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T12:43:44-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T12:44:19-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T12:44:19-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T12:44:19-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T12:44:25-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T12:44:25-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T12:44:25-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T12:44:30-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T12:44:30-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T12:44:30-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T12:53:41-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T12:53:41-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T12:53:41-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T12:53:48-0300", "levelname": "INFO", "name": "ftc4.api.v1.routers.model_lstm", "message": "Os proximos 10 valores de fechamento foram previstos. [154.34381 152.79358 152.14758, ...]", "request_id": "-"}
+{"asctime": "2025-10-25T12:54:13-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T12:54:13-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T12:54:13-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T12:54:13-0300", "levelname": "INFO", "name": "ftc4.api.v1.routers.model_lstm", "message": "Os proximos 10 valores de fechamento foram previstos. [np.float32(154.34381), np.float32(152.79358), np.float32(152.14758), ...]", "request_id": "-"}
+{"asctime": "2025-10-25T12:55:30-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T12:55:30-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T12:55:30-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T12:55:30-0300", "levelname": "INFO", "name": "ftc4.api.v1.routers.model_lstm", "message": "Os proximos 10 valores de fechamento foram previstos. [154.34381103515625, 152.7935791015625, 152.1475830078125, ...]", "request_id": "-"}
+{"asctime": "2025-10-25T12:55:52-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T12:55:52-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T12:55:52-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T12:56:03-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T12:56:03-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T12:56:03-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T12:58:37-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T12:58:37-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T12:58:37-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T14:27:05-0300", "levelname": "INFO", "name": "ftc4.api.public", "message": "", "request_id": "-", "status": "ok"}
+{"asctime": "2025-10-25T14:27:05-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T14:27:05-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T14:27:05-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}
+{"asctime": "2025-10-25T14:29:25-0300", "levelname": "INFO", "name": "ftc4.api.public", "message": "", "request_id": "-", "status": "ok"}
+{"asctime": "2025-10-25T14:29:25-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verificando diret\u00f3rio do banco de dados...", "request_id": "-"}
+{"asctime": "2025-10-25T14:29:25-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Importando modelos ORM...", "request_id": "-"}
+{"asctime": "2025-10-25T14:29:25-0300", "levelname": "INFO", "name": "ftc4.data_pipeline.database.init_db", "message": "Verifica e cria todas as tabelas no banco...", "request_id": "-"}

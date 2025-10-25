@@ -2,7 +2,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import DeclarativeBase, sessionmaker, scoped_session
 from ftc4.common.config import settings
 from sqlalchemy import URL
+from ftc4.common.logger import get_logger
 
+logger = get_logger(__name__)
 
 # URL do SQLite
 url = URL.create(drivername='sqlite', database=settings.DATABASE_PATH.as_posix())
@@ -24,3 +26,9 @@ def get_db():
         yield db
     finally:
         db.close()
+
+
+if __name__ == "__main__":
+    logger.info(url)
+    logger.info(engine)
+
